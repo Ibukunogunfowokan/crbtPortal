@@ -1,0 +1,886 @@
+=== CLIENT LOGIN ATTEMPT START === | 2026-06-17 10:57:51
+<=============================================>
+Raw Input Data: {"email":"ibukunoluwa2@yopmail.com","password":"password"} | 2026-06-17 10:57:51
+<=============================================>
+Validation failed: Missing email, password or url. | 2026-06-17 10:57:51
+<=============================================>
+=== CLIENT LOGIN ATTEMPT START === | 2026-06-17 10:58:13
+<=============================================>
+Raw Input Data: {"email":"ibukunoluwa2@yopmail.com","password":"password"} | 2026-06-17 10:58:13
+<=============================================>
+Validation failed: Missing email, password or url. | 2026-06-17 10:58:13
+<=============================================>
+=== CLIENT LOGIN ATTEMPT START === | 2026-06-17 10:58:54
+<=============================================>
+Raw Input Data: {"email":"ibukunoluwa2@yopmail.com","password":"password","url":"https:\/\/www.playimdb.com\/title\/tt35695538\/"} | 2026-06-17 10:58:54
+<=============================================>
+Executing SQL query: SELECT c.id, c.organisation_id, o.name AS organisation_name, o.url AS organisation_url, c.name, c.email, c.password, c.role, c.two_fa, c.soft_delete FROM clients c LEFT JOIN organisations o ON c.organisation_id = o.id WHERE c.email='ibukunoluwa2@yopmail.com' | 2026-06-17 10:58:54
+<=============================================>
+Query executed. Rows found: 0 | 2026-06-17 10:58:54
+<=============================================>
+Login failed: No matching client for email: ibukunoluwa2@yopmail.com | 2026-06-17 10:58:54
+<=============================================>
+=== CLIENT LOGIN ATTEMPT END === | 2026-06-17 10:58:54
+<=============================================>
+=== CLIENT LOGIN ATTEMPT START === | 2026-06-17 11:01:06
+<=============================================>
+Raw Input Data: {"email":"ibukunoluwa2@yopmail.com","password":"password","url":"https:\/\/www.playimdb.com\/title\/tt35695538\/"} | 2026-06-17 11:01:06
+<=============================================>
+Executing SQL query: SELECT c.id, c.organisation_id, o.name AS organisation_name, o.url AS organisation_url, c.name, c.email, c.password, c.role, c.two_fa, c.soft_delete FROM clients c LEFT JOIN organisations o ON c.organisation_id = o.id WHERE c.email='ibukunoluwa2@yopmail.com' | 2026-06-17 11:01:06
+<=============================================>
+Query executed. Rows found: 0 | 2026-06-17 11:01:06
+<=============================================>
+Login failed: No matching client for email: ibukunoluwa2@yopmail.com | 2026-06-17 11:01:06
+<=============================================>
+=== CLIENT LOGIN ATTEMPT END === | 2026-06-17 11:01:06
+<=============================================>
+=== CLIENT LOGIN ATTEMPT START === | 2026-06-17 11:02:24
+<=============================================>
+Raw Input Data: {"email":"ibukunoluwa2@yopmail.com ","password":"password","url":"https:\/\/www.playimdb.com\/title\/tt35695538\/"} | 2026-06-17 11:02:24
+<=============================================>
+Executing SQL query: SELECT c.id, c.organisation_id, o.name AS organisation_name, o.url AS organisation_url, c.name, c.email, c.password, c.role, c.two_fa, c.soft_delete FROM clients c LEFT JOIN organisations o ON c.organisation_id = o.id WHERE c.email='ibukunoluwa2@yopmail.com' | 2026-06-17 11:02:24
+<=============================================>
+Query executed. Rows found: 0 | 2026-06-17 11:02:24
+<=============================================>
+Login failed: No matching client for email: ibukunoluwa2@yopmail.com | 2026-06-17 11:02:24
+<=============================================>
+=== CLIENT LOGIN ATTEMPT END === | 2026-06-17 11:02:24
+<=============================================>
+=== CLIENT LOGIN ATTEMPT START === | 2026-06-17 11:02:29
+<=============================================>
+Raw Input Data: {"email":"ibukunoluwa2@yopmail.com  ","password":"password","url":"https:\/\/www.playimdb.com\/title\/tt35695538\/"} | 2026-06-17 11:02:29
+<=============================================>
+Executing SQL query: SELECT c.id, c.organisation_id, o.name AS organisation_name, o.url AS organisation_url, c.name, c.email, c.password, c.role, c.two_fa, c.soft_delete FROM clients c LEFT JOIN organisations o ON c.organisation_id = o.id WHERE c.email='ibukunoluwa2@yopmail.com' | 2026-06-17 11:02:29
+<=============================================>
+Query executed. Rows found: 0 | 2026-06-17 11:02:29
+<=============================================>
+Login failed: No matching client for email: ibukunoluwa2@yopmail.com | 2026-06-17 11:02:29
+<=============================================>
+=== CLIENT LOGIN ATTEMPT END === | 2026-06-17 11:02:29
+<=============================================>
+=== CLIENT LOGIN ATTEMPT START === | 2026-06-17 11:03:57
+<=============================================>
+Raw Input Data: {"email":"ibukunoluwa2@yopmail.com","password":"password","url":"https:\/\/www.playimdb.com\/title\/tt35695538\/"} | 2026-06-17 11:03:57
+<=============================================>
+Executing SQL query: SELECT c.id, c.organisation_id, o.name AS organisation_name, o.url AS organisation_url, c.name, c.email, c.password, c.role, c.two_fa, c.soft_delete FROM clients c LEFT JOIN organisations o ON c.organisation_id = o.id WHERE c.email='ibukunoluwa2@yopmail.com' | 2026-06-17 11:03:57
+<=============================================>
+Client login exception: Object of class mysqli_result could not be converted to string | 2026-06-17 11:03:57
+<=============================================>
+=== CLIENT LOGIN ATTEMPT END === | 2026-06-17 11:03:57
+<=============================================>
+=== CLIENT LOGIN ATTEMPT START === | 2026-06-17 11:07:34
+<=============================================>
+Raw Input Data: {"email":"ibukunoluwa2@yopmail.com","password":"password","url":"https:\/\/www.playimdb.com\/title\/tt35695538\/"} | 2026-06-17 11:07:34
+<=============================================>
+Executing SQL query: SELECT c.id, c.organisation_id, o.name AS organisation_name, o.url AS organisation_url, c.name, c.email, c.password, c.role, c.two_fa, c.soft_delete FROM clients c LEFT JOIN organisations o ON c.organisation_id = o.id WHERE c.email='ibukunoluwa2@yopmail.com' | 2026-06-17 11:07:34
+<=============================================>
+Query executed. Rows found: 0 | 2026-06-17 11:07:34
+<=============================================>
+Login failed: No matching client for email: ibukunoluwa2@yopmail.com | 2026-06-17 11:07:34
+<=============================================>
+=== CLIENT LOGIN ATTEMPT END === | 2026-06-17 11:07:34
+<=============================================>
+=== CLIENT LOGIN ATTEMPT START === | 2026-06-17 11:14:45
+<=============================================>
+Raw Input Data: {"email":"ibukunoluwa2@yopmail.com","password":"password","url":"https:\/\/www.playimdb.com\/title\/tt35695538\/"} | 2026-06-17 11:14:45
+<=============================================>
+Executing SQL query: SELECT c.id, c.organisation_id, o.name AS organisation_name, o.url AS organisation_url, c.name, c.email, c.password, c.role, c.two_fa, c.soft_delete FROM clients c LEFT JOIN organisations o ON c.organisation_id = o.id WHERE c.email='ibukunoluwa2@yopmail.com' | 2026-06-17 11:14:45
+<=============================================>
+Query executed. Rows found: 1 | 2026-06-17 11:14:45
+<=============================================>
+Client record fetched for: ibukunoluwa2@yopmail.com | 2026-06-17 11:14:45
+<=============================================>
+Password verified successfully for client ID: 1 | 2026-06-17 11:14:46
+<=============================================>
+JWT generated for client ID: 1 | 2026-06-17 11:14:46
+<=============================================>
+=== CLIENT LOGIN ATTEMPT END === | 2026-06-17 11:14:46
+<=============================================>
+=== CLIENT ME ATTEMPT START === | 2026-06-17 11:18:19
+<=============================================>
+Authorized caller: id=1 role=user | 2026-06-17 11:18:19
+<=============================================>
+Client me retrieved successfully: id=1 | 2026-06-17 11:18:19
+<=============================================>
+=== CLIENT ME ATTEMPT END === | 2026-06-17 11:18:19
+<=============================================>
+=== CLIENT LOGIN ATTEMPT START === | 2026-06-17 11:21:44
+<=============================================>
+Raw Input Data: {"email":"ibukunoluwa2@yopmail.com","password":"password","url":"https:\/\/www.playimdb.com\/title\/tt35695538\/"} | 2026-06-17 11:21:44
+<=============================================>
+Executing SQL query: SELECT c.id, c.organisation_id, o.name AS organisation_name, o.url AS organisation_url, c.name, c.email, c.password, c.role, c.two_fa, c.soft_delete FROM clients c LEFT JOIN organisations o ON c.organisation_id = o.id WHERE c.email='ibukunoluwa2@yopmail.com' | 2026-06-17 11:21:44
+<=============================================>
+Query executed. Rows found: 1 | 2026-06-17 11:21:44
+<=============================================>
+Client record fetched for: ibukunoluwa2@yopmail.com | 2026-06-17 11:21:44
+<=============================================>
+Password verified successfully for client ID: 1 | 2026-06-17 11:21:44
+<=============================================>
+JWT generated for client ID: 1 | 2026-06-17 11:21:44
+<=============================================>
+=== CLIENT LOGIN ATTEMPT END === | 2026-06-17 11:21:44
+<=============================================>
+=== CLIENT ME ATTEMPT START === | 2026-06-17 11:22:18
+<=============================================>
+Authorized caller: id=1 role=user | 2026-06-17 11:22:18
+<=============================================>
+Client me exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.token
+         FROM clients c
+         LEFT JOIN organisations o ON c.organisat' at line 1 | 2026-06-17 11:22:18
+<=============================================>
+=== CLIENT ME ATTEMPT END === | 2026-06-17 11:22:18
+<=============================================>
+=== CLIENT ME ATTEMPT START === | 2026-06-17 11:23:02
+<=============================================>
+Authorized caller: id=1 role=user | 2026-06-17 11:23:02
+<=============================================>
+Client me retrieved successfully: id=1 | 2026-06-17 11:23:02
+<=============================================>
+=== CLIENT ME ATTEMPT END === | 2026-06-17 11:23:02
+<=============================================>
+=== CLIENT ME ATTEMPT START === | 2026-06-17 11:23:42
+<=============================================>
+Authorized caller: id=1 role=user | 2026-06-17 11:23:42
+<=============================================>
+Client me retrieved successfully: id=1 | 2026-06-17 11:23:42
+<=============================================>
+=== CLIENT ME ATTEMPT END === | 2026-06-17 11:23:42
+<=============================================>
+=== LOGIN ATTEMPT START === | 2026-06-17 11:27:49
+<=============================================>
+Raw Input Data: {"email":"ibukunogunfowokan@gmail.com","password":"password"} | 2026-06-17 11:27:49
+<=============================================>
+Executing SQL query: SELECT id, firstname, lastname, email, password, role, two_fa, soft_delete FROM admins WHERE email='ibukunogunfowokan@gmail.com' | 2026-06-17 11:27:49
+<=============================================>
+Query executed. Rows found: 1 | 2026-06-17 11:27:49
+<=============================================>
+User record fetched for: ibukunogunfowokan@gmail.com | 2026-06-17 11:27:49
+<=============================================>
+Password verified successfully for user ID: 1 | 2026-06-17 11:27:49
+<=============================================>
+JWT generated for user ID: 1 | 2026-06-17 11:27:49
+<=============================================>
+=== LOGIN ATTEMPT END === | 2026-06-17 11:27:49
+<=============================================>
+=== ME ATTEMPT START === | 2026-06-17 11:29:23
+<=============================================>
+Auth blocked: Authorization header missing | 2026-06-17 11:29:23
+<=============================================>
+=== ME ATTEMPT START === | 2026-06-17 11:29:35
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 11:29:35
+<=============================================>
+Me retrieved successfully: id=1 | 2026-06-17 11:29:35
+<=============================================>
+=== ME ATTEMPT END === | 2026-06-17 11:29:35
+<=============================================>
+=== ME ATTEMPT START === | 2026-06-17 11:31:27
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 11:31:27
+<=============================================>
+Me retrieved successfully: id=1 | 2026-06-17 11:31:27
+<=============================================>
+=== ME ATTEMPT END === | 2026-06-17 11:31:27
+<=============================================>
+=== CREATE ADMIN ATTEMPT START === | 2026-06-17 11:32:29
+<=============================================>
+Auth blocked: invalid or expired token | 2026-06-17 11:32:29
+<=============================================>
+=== CLIENT ME ATTEMPT START === | 2026-06-17 11:32:41
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 11:32:41
+<=============================================>
+Auth blocked: caller id=1 role=super_admin is not authorized | 2026-06-17 11:32:41
+<=============================================>
+=== CLIENT LOGIN ATTEMPT START === | 2026-06-17 11:32:56
+<=============================================>
+Raw Input Data: {"email":"ibukunoluwa2@yopmail.com","password":"password","url":"https:\/\/www.playimdb.com\/title\/tt35695538\/"} | 2026-06-17 11:32:56
+<=============================================>
+Executing SQL query: SELECT c.id, c.organisation_id, o.name AS organisation_name, o.url AS organisation_url, c.name, c.email, c.password, c.role, c.two_fa, c.soft_delete FROM clients c LEFT JOIN organisations o ON c.organisation_id = o.id WHERE c.email='ibukunoluwa2@yopmail.com' | 2026-06-17 11:32:56
+<=============================================>
+Query executed. Rows found: 1 | 2026-06-17 11:32:56
+<=============================================>
+Client record fetched for: ibukunoluwa2@yopmail.com | 2026-06-17 11:32:56
+<=============================================>
+Password verified successfully for client ID: 1 | 2026-06-17 11:32:56
+<=============================================>
+JWT generated for client ID: 1 | 2026-06-17 11:32:56
+<=============================================>
+=== CLIENT LOGIN ATTEMPT END === | 2026-06-17 11:32:56
+<=============================================>
+=== CLIENT ME ATTEMPT START === | 2026-06-17 11:33:15
+<=============================================>
+Authorized caller: id=1 role=user | 2026-06-17 11:33:15
+<=============================================>
+Client me retrieved successfully: id=1 | 2026-06-17 11:33:15
+<=============================================>
+=== CLIENT ME ATTEMPT END === | 2026-06-17 11:33:15
+<=============================================>
+=== CLIENT CHANGE PASSWORD ATTEMPT START === | 2026-06-17 11:35:47
+<=============================================>
+Authorized caller: id=1 role=user | 2026-06-17 11:35:47
+<=============================================>
+=== CLIENT CHANGE PASSWORD ATTEMPT START === | 2026-06-17 11:36:04
+<=============================================>
+Authorized caller: id=1 role=user | 2026-06-17 11:36:04
+<=============================================>
+Client password changed successfully for id=1 | 2026-06-17 11:36:05
+<=============================================>
+=== CLIENT CHANGE PASSWORD ATTEMPT END === | 2026-06-17 11:36:05
+<=============================================>
+=== CLIENT CHANGE PASSWORD ATTEMPT START === | 2026-06-17 11:37:00
+<=============================================>
+Authorized caller: id=1 role=user | 2026-06-17 11:37:00
+<=============================================>
+Client change password failed: old password mismatch for id=1 | 2026-06-17 11:37:00
+<=============================================>
+=== CLIENT CHANGE PASSWORD ATTEMPT START === | 2026-06-17 11:37:09
+<=============================================>
+Authorized caller: id=1 role=user | 2026-06-17 11:37:09
+<=============================================>
+Client password changed successfully for id=1 | 2026-06-17 11:37:10
+<=============================================>
+=== CLIENT CHANGE PASSWORD ATTEMPT END === | 2026-06-17 11:37:10
+<=============================================>
+=== CHANGE PASSWORD ATTEMPT START === | 2026-06-17 11:42:00
+<=============================================>
+Auth blocked: Authorization header missing | 2026-06-17 11:42:00
+<=============================================>
+=== LOGIN ATTEMPT START === | 2026-06-17 11:42:19
+<=============================================>
+Raw Input Data: {"email":"ibukunogunfowokan@gmail.com","password":"password"} | 2026-06-17 11:42:19
+<=============================================>
+Executing SQL query: SELECT id, firstname, lastname, email, password, role, two_fa, soft_delete FROM admins WHERE email='ibukunogunfowokan@gmail.com' | 2026-06-17 11:42:19
+<=============================================>
+Query executed. Rows found: 1 | 2026-06-17 11:42:19
+<=============================================>
+User record fetched for: ibukunogunfowokan@gmail.com | 2026-06-17 11:42:19
+<=============================================>
+Password verified successfully for user ID: 1 | 2026-06-17 11:42:19
+<=============================================>
+JWT generated for user ID: 1 | 2026-06-17 11:42:19
+<=============================================>
+=== LOGIN ATTEMPT END === | 2026-06-17 11:42:19
+<=============================================>
+=== CHANGE PASSWORD ATTEMPT START === | 2026-06-17 11:42:40
+<=============================================>
+Auth blocked: Authorization header missing | 2026-06-17 11:42:40
+<=============================================>
+=== CHANGE PASSWORD ATTEMPT START === | 2026-06-17 11:43:06
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 11:43:06
+<=============================================>
+Password changed successfully for id=1 | 2026-06-17 11:43:07
+<=============================================>
+=== CHANGE PASSWORD ATTEMPT END === | 2026-06-17 11:43:07
+<=============================================>
+=== CHANGE PASSWORD ATTEMPT START === | 2026-06-17 11:43:13
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 11:43:13
+<=============================================>
+Change password failed: old password mismatch for id=1 | 2026-06-17 11:43:14
+<=============================================>
+=== CHANGE PASSWORD ATTEMPT START === | 2026-06-17 11:43:18
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 11:43:18
+<=============================================>
+Password changed successfully for id=1 | 2026-06-17 11:43:19
+<=============================================>
+=== CHANGE PASSWORD ATTEMPT END === | 2026-06-17 11:43:19
+<=============================================>
+=== CHANGE PASSWORD ATTEMPT START === | 2026-06-17 11:43:41
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 11:43:41
+<=============================================>
+Password changed successfully for id=1 | 2026-06-17 11:43:41
+<=============================================>
+=== CHANGE PASSWORD ATTEMPT END === | 2026-06-17 11:43:41
+<=============================================>
+=== CREATE ADMIN ATTEMPT START === | 2026-06-17 11:44:26
+<=============================================>
+Auth blocked: invalid or expired token | 2026-06-17 11:44:26
+<=============================================>
+=== LOGIN ATTEMPT START === | 2026-06-17 11:44:51
+<=============================================>
+Raw Input Data: {"email":"ibukunogunfowokan@gmail.com","password":"password"} | 2026-06-17 11:44:51
+<=============================================>
+Executing SQL query: SELECT id, firstname, lastname, email, password, role, two_fa, soft_delete FROM admins WHERE email='ibukunogunfowokan@gmail.com' | 2026-06-17 11:44:51
+<=============================================>
+Query executed. Rows found: 1 | 2026-06-17 11:44:51
+<=============================================>
+User record fetched for: ibukunogunfowokan@gmail.com | 2026-06-17 11:44:51
+<=============================================>
+Password verified successfully for user ID: 1 | 2026-06-17 11:44:51
+<=============================================>
+JWT generated for user ID: 1 | 2026-06-17 11:44:51
+<=============================================>
+=== LOGIN ATTEMPT END === | 2026-06-17 11:44:51
+<=============================================>
+=== CREATE ADMIN ATTEMPT START === | 2026-06-17 11:47:25
+<=============================================>
+Auth blocked: invalid or expired token | 2026-06-17 11:47:25
+<=============================================>
+=== LOGIN ATTEMPT START === | 2026-06-17 11:47:30
+<=============================================>
+Raw Input Data: {"email":"ibukunogunfowokan@gmail.com","password":"password"} | 2026-06-17 11:47:30
+<=============================================>
+Executing SQL query: SELECT id, firstname, lastname, email, password, role, two_fa, soft_delete FROM admins WHERE email='ibukunogunfowokan@gmail.com' | 2026-06-17 11:47:30
+<=============================================>
+Query executed. Rows found: 1 | 2026-06-17 11:47:30
+<=============================================>
+User record fetched for: ibukunogunfowokan@gmail.com | 2026-06-17 11:47:30
+<=============================================>
+Password verified successfully for user ID: 1 | 2026-06-17 11:47:31
+<=============================================>
+JWT generated for user ID: 1 | 2026-06-17 11:47:31
+<=============================================>
+=== LOGIN ATTEMPT END === | 2026-06-17 11:47:31
+<=============================================>
+=== CREATE ADMIN ATTEMPT START === | 2026-06-17 11:47:51
+<=============================================>
+Auth blocked: invalid or expired token | 2026-06-17 11:47:51
+<=============================================>
+=== CREATE ADMIN ATTEMPT START === | 2026-06-17 11:48:01
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 11:48:01
+<=============================================>
+Raw Input Data: {"firstname":"Jane","lastname":"Doe","email":"jane.doe5@example.com","password":"SuperSecret123","role":"admin"} | 2026-06-17 11:48:01
+<=============================================>
+Admin created successfully: id=4, email=jane.doe5@example.com, role=admin | 2026-06-17 11:48:01
+<=============================================>
+=== CREATE ADMIN ATTEMPT END === | 2026-06-17 11:48:01
+<=============================================>
+=== READ ADMIN ATTEMPT START === | 2026-06-17 11:48:29
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 11:48:29
+<=============================================>
+Admins retrieved successfully: count=4 | 2026-06-17 11:48:29
+<=============================================>
+=== READ ADMIN ATTEMPT END === | 2026-06-17 11:48:29
+<=============================================>
+=== READ ADMIN ATTEMPT START === | 2026-06-17 11:48:42
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 11:48:42
+<=============================================>
+Admin retrieved successfully: id=1 | 2026-06-17 11:48:42
+<=============================================>
+=== UPDATE ADMIN ATTEMPT START === | 2026-06-17 12:23:05
+<=============================================>
+Auth blocked: invalid or expired token | 2026-06-17 12:23:05
+<=============================================>
+=== LOGIN ATTEMPT START === | 2026-06-17 12:23:09
+<=============================================>
+Raw Input Data: {"email":"ibukunogunfowokan@gmail.com","password":"password"} | 2026-06-17 12:23:09
+<=============================================>
+Executing SQL query: SELECT id, firstname, lastname, email, password, role, two_fa, soft_delete FROM admins WHERE email='ibukunogunfowokan@gmail.com' | 2026-06-17 12:23:09
+<=============================================>
+Query executed. Rows found: 1 | 2026-06-17 12:23:09
+<=============================================>
+User record fetched for: ibukunogunfowokan@gmail.com | 2026-06-17 12:23:09
+<=============================================>
+Password verified successfully for user ID: 1 | 2026-06-17 12:23:09
+<=============================================>
+JWT generated for user ID: 1 | 2026-06-17 12:23:09
+<=============================================>
+=== LOGIN ATTEMPT END === | 2026-06-17 12:23:10
+<=============================================>
+=== UPDATE ADMIN ATTEMPT START === | 2026-06-17 12:23:24
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 12:23:24
+<=============================================>
+Raw Input Data: {"id":2,"firstname":"dan","lastname":"loc","password":"password"} | 2026-06-17 12:23:24
+<=============================================>
+Admin updated successfully: id=2 by caller id=1 | 2026-06-17 12:23:25
+<=============================================>
+=== UPDATE ADMIN ATTEMPT END === | 2026-06-17 12:23:25
+<=============================================>
+=== UPDATE ADMIN ATTEMPT START === | 2026-06-17 12:23:43
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 12:23:43
+<=============================================>
+Raw Input Data: {"id":2,"firstname":"dan","lastname":"loc"} | 2026-06-17 12:23:43
+<=============================================>
+Admin updated successfully: id=2 by caller id=1 | 2026-06-17 12:23:43
+<=============================================>
+=== UPDATE ADMIN ATTEMPT END === | 2026-06-17 12:23:43
+<=============================================>
+=== UPDATE ADMIN ATTEMPT START === | 2026-06-17 12:23:50
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 12:23:50
+<=============================================>
+Raw Input Data: {"id":2,"firstname":"dan"} | 2026-06-17 12:23:50
+<=============================================>
+Admin updated successfully: id=2 by caller id=1 | 2026-06-17 12:23:50
+<=============================================>
+=== UPDATE ADMIN ATTEMPT END === | 2026-06-17 12:23:50
+<=============================================>
+=== UPDATE ADMIN ATTEMPT START === | 2026-06-17 12:23:59
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 12:23:59
+<=============================================>
+Raw Input Data: [] | 2026-06-17 12:23:59
+<=============================================>
+=== UPDATE ADMIN ATTEMPT START === | 2026-06-17 12:24:04
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 12:24:04
+<=============================================>
+Raw Input Data: {"id":2} | 2026-06-17 12:24:04
+<=============================================>
+=== LOGIN ATTEMPT START === | 2026-06-17 12:25:15
+<=============================================>
+Raw Input Data: {"email":"jane.doe@example.com","password":"password"} | 2026-06-17 12:25:15
+<=============================================>
+Executing SQL query: SELECT id, firstname, lastname, email, password, role, two_fa, soft_delete FROM admins WHERE email='jane.doe@example.com' | 2026-06-17 12:25:15
+<=============================================>
+Query executed. Rows found: 1 | 2026-06-17 12:25:15
+<=============================================>
+User record fetched for: jane.doe@example.com | 2026-06-17 12:25:15
+<=============================================>
+Password verified successfully for user ID: 2 | 2026-06-17 12:25:15
+<=============================================>
+JWT generated for user ID: 2 | 2026-06-17 12:25:15
+<=============================================>
+=== LOGIN ATTEMPT END === | 2026-06-17 12:25:15
+<=============================================>
+=== UPDATE ADMIN ATTEMPT START === | 2026-06-17 12:25:33
+<=============================================>
+Authorized caller: id=2 role=admin | 2026-06-17 12:25:33
+<=============================================>
+Raw Input Data: {"id":2,"firstname":"dan","lastname":"loc","password":"password"} | 2026-06-17 12:25:33
+<=============================================>
+Update admin blocked: caller id=2 attempted to change password without super_admin role | 2026-06-17 12:25:33
+<=============================================>
+=== UPDATE ADMIN ATTEMPT START === | 2026-06-17 12:25:46
+<=============================================>
+Authorized caller: id=2 role=admin | 2026-06-17 12:25:46
+<=============================================>
+Raw Input Data: {"id":4,"firstname":"dan","lastname":"loc"} | 2026-06-17 12:25:46
+<=============================================>
+Update admin blocked: caller id=2 attempted to update id=4 | 2026-06-17 12:25:46
+<=============================================>
+=== DELETE ADMIN ATTEMPT START === | 2026-06-17 12:27:19
+<=============================================>
+Authorized caller: id=2 role=admin | 2026-06-17 12:27:19
+<=============================================>
+Auth blocked: caller id=2 role=admin is not authorized | 2026-06-17 12:27:19
+<=============================================>
+=== LOGIN ATTEMPT START === | 2026-06-17 12:27:30
+<=============================================>
+Raw Input Data: {"email":"ibukunogunfowokan@gmail.com","password":"password"} | 2026-06-17 12:27:30
+<=============================================>
+Executing SQL query: SELECT id, firstname, lastname, email, password, role, two_fa, soft_delete FROM admins WHERE email='ibukunogunfowokan@gmail.com' | 2026-06-17 12:27:30
+<=============================================>
+Query executed. Rows found: 1 | 2026-06-17 12:27:30
+<=============================================>
+User record fetched for: ibukunogunfowokan@gmail.com | 2026-06-17 12:27:30
+<=============================================>
+Password verified successfully for user ID: 1 | 2026-06-17 12:27:30
+<=============================================>
+JWT generated for user ID: 1 | 2026-06-17 12:27:30
+<=============================================>
+=== LOGIN ATTEMPT END === | 2026-06-17 12:27:30
+<=============================================>
+=== DELETE ADMIN ATTEMPT START === | 2026-06-17 12:27:47
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 12:27:47
+<=============================================>
+Raw Input Data: {"1d":4} | 2026-06-17 12:27:47
+<=============================================>
+=== DELETE ADMIN ATTEMPT START === | 2026-06-17 12:28:13
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 12:28:13
+<=============================================>
+Raw Input Data: {"id":4} | 2026-06-17 12:28:13
+<=============================================>
+Admin soft-deleted successfully: id=4 (Jane Doe) by caller id=1 | 2026-06-17 12:28:13
+<=============================================>
+=== DELETE ADMIN ATTEMPT END === | 2026-06-17 12:28:13
+<=============================================>
+=== CREATE ORGANISATION ATTEMPT START === | 2026-06-17 13:30:52
+<=============================================>
+Auth blocked: invalid or expired token | 2026-06-17 13:30:52
+<=============================================>
+=== LOGIN ATTEMPT START === | 2026-06-17 13:31:20
+<=============================================>
+Raw Input Data: {"email":"ibukunogunfowokan@gmail.com","password":"password"} | 2026-06-17 13:31:20
+<=============================================>
+Executing SQL query: SELECT id, firstname, lastname, email, password, role, two_fa, soft_delete FROM admins WHERE email='ibukunogunfowokan@gmail.com' | 2026-06-17 13:31:20
+<=============================================>
+Query executed. Rows found: 1 | 2026-06-17 13:31:20
+<=============================================>
+User record fetched for: ibukunogunfowokan@gmail.com | 2026-06-17 13:31:20
+<=============================================>
+Password verified successfully for user ID: 1 | 2026-06-17 13:31:20
+<=============================================>
+JWT generated for user ID: 1 | 2026-06-17 13:31:20
+<=============================================>
+=== LOGIN ATTEMPT END === | 2026-06-17 13:31:20
+<=============================================>
+=== CREATE ORGANISATION ATTEMPT START === | 2026-06-17 13:31:55
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 13:31:55
+<=============================================>
+Raw Input Data: {"name":"BBC","email":"bbc@bbcglobal.com","url":"https:\/\/bbc.ai\/"} | 2026-06-17 13:31:55
+<=============================================>
+Organisation created successfully: id=2, name=BBC | 2026-06-17 13:31:55
+<=============================================>
+=== CREATE ORGANISATION ATTEMPT END === | 2026-06-17 13:31:55
+<=============================================>
+=== CREATE ORGANISATION ATTEMPT START === | 2026-06-17 13:32:04
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 13:32:04
+<=============================================>
+Raw Input Data: {"name":"BBC","email":"bbc@bbcglobal.com"} | 2026-06-17 13:32:04
+<=============================================>
+=== CREATE ORGANISATION ATTEMPT START === | 2026-06-17 13:32:16
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 13:32:16
+<=============================================>
+Raw Input Data: {"name":"BBC","email":"bbc@bbcglobal.com","url":"https:\/\/bbc.ai\/"} | 2026-06-17 13:32:16
+<=============================================>
+Create organisation failed: email already in use - bbc@bbcglobal.com | 2026-06-17 13:32:16
+<=============================================>
+=== CREATE ORGANISATION ATTEMPT START === | 2026-06-17 13:32:25
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 13:32:25
+<=============================================>
+Raw Input Data: {"name":"BBC2","email":"bbc@bbcglobal2.com","url":"https:\/\/bbc.ai\/"} | 2026-06-17 13:32:25
+<=============================================>
+Organisation created successfully: id=3, name=BBC2 | 2026-06-17 13:32:25
+<=============================================>
+=== CREATE ORGANISATION ATTEMPT END === | 2026-06-17 13:32:25
+<=============================================>
+=== READ ORGANISATION ATTEMPT START === | 2026-06-17 13:34:26
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 13:34:26
+<=============================================>
+Organisations retrieved successfully: count=3 | 2026-06-17 13:34:26
+<=============================================>
+=== READ ORGANISATION ATTEMPT END === | 2026-06-17 13:34:26
+<=============================================>
+=== UPDATE ORGANISATION ATTEMPT START === | 2026-06-17 13:35:35
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 13:35:35
+<=============================================>
+Raw Input Data: [] | 2026-06-17 13:35:35
+<=============================================>
+=== UPDATE ORGANISATION ATTEMPT START === | 2026-06-17 13:35:57
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 13:35:57
+<=============================================>
+Raw Input Data: {"id":1,"name":"BBC2","email":"bbc@bbcglobal2.com","url":"https:\/\/bbc.ai\/"} | 2026-06-17 13:35:57
+<=============================================>
+=== UPDATE ORGANISATION ATTEMPT START === | 2026-06-17 13:36:12
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 13:36:12
+<=============================================>
+Raw Input Data: {"id":1,"name":"BBC2","email":"bbc@bbcglobal3.com","url":"https:\/\/bbc.ai\/"} | 2026-06-17 13:36:12
+<=============================================>
+Organisation updated successfully: id=1 by caller id=1 | 2026-06-17 13:36:12
+<=============================================>
+=== UPDATE ORGANISATION ATTEMPT END === | 2026-06-17 13:36:12
+<=============================================>
+=== UPDATE ORGANISATION ATTEMPT START === | 2026-06-17 13:36:24
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 13:36:24
+<=============================================>
+Raw Input Data: {"id":1,"name":"BBC2","url":"https:\/\/bbc.ai\/"} | 2026-06-17 13:36:24
+<=============================================>
+Organisation updated successfully: id=1 by caller id=1 | 2026-06-17 13:36:24
+<=============================================>
+=== UPDATE ORGANISATION ATTEMPT END === | 2026-06-17 13:36:24
+<=============================================>
+=== UPDATE ORGANISATION ATTEMPT START === | 2026-06-17 13:36:32
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 13:36:32
+<=============================================>
+Raw Input Data: {"id":1,"name":"BBC2","url":"https:\/\/bbc3.ai\/"} | 2026-06-17 13:36:32
+<=============================================>
+Organisation updated successfully: id=1 by caller id=1 | 2026-06-17 13:36:32
+<=============================================>
+=== UPDATE ORGANISATION ATTEMPT END === | 2026-06-17 13:36:32
+<=============================================>
+=== DELETE ORGANISATION ATTEMPT START === | 2026-06-17 13:37:20
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 13:37:20
+<=============================================>
+Raw Input Data: [] | 2026-06-17 13:37:20
+<=============================================>
+=== DELETE ORGANISATION ATTEMPT START === | 2026-06-17 13:37:33
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 13:37:33
+<=============================================>
+Raw Input Data: {"id":1} | 2026-06-17 13:37:33
+<=============================================>
+Delete organisation exception: Cannot delete or update a parent row: a foreign key constraint fails (`crbtportal`.`clients`, CONSTRAINT `fk_clients_organisation` FOREIGN KEY (`organisation_id`) REFERENCES `organisations` (`id`) ON DELETE RESTRICT) | 2026-06-17 13:37:33
+<=============================================>
+=== DELETE ORGANISATION ATTEMPT END === | 2026-06-17 13:37:33
+<=============================================>
+=== DELETE ORGANISATION ATTEMPT START === | 2026-06-17 13:48:18
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 13:48:18
+<=============================================>
+Raw Input Data: {"id":1} | 2026-06-17 13:48:18
+<=============================================>
+Delete organisation blocked: 1 active client(s) attached to id=1 (BBC2) | 2026-06-17 13:48:18
+<=============================================>
+DB connection exception: Connection refused | 2026-06-17 14:32:38
+<=============================================>
+=== LOGIN ATTEMPT START === | 2026-06-17 14:32:53
+<=============================================>
+Raw Input Data: {"email":"ibukunogunfowokan@gmail.com","password":"password"} | 2026-06-17 14:32:53
+<=============================================>
+Executing SQL query: SELECT id, firstname, lastname, email, password, role, two_fa, soft_delete FROM admins WHERE email='ibukunogunfowokan@gmail.com' | 2026-06-17 14:32:53
+<=============================================>
+Query executed. Rows found: 1 | 2026-06-17 14:32:53
+<=============================================>
+User record fetched for: ibukunogunfowokan@gmail.com | 2026-06-17 14:32:53
+<=============================================>
+Password verified successfully for user ID: 1 | 2026-06-17 14:32:54
+<=============================================>
+JWT generated for user ID: 1 | 2026-06-17 14:32:54
+<=============================================>
+=== LOGIN ATTEMPT END === | 2026-06-17 14:32:54
+<=============================================>
+=== CREATE CATEGORY ATTEMPT START === | 2026-06-17 14:35:26
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:35:26
+<=============================================>
+Raw Input Data: [] | 2026-06-17 14:35:26
+<=============================================>
+=== CREATE CATEGORY ATTEMPT START === | 2026-06-17 14:35:32
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:35:32
+<=============================================>
+Raw Input Data: {"name":"Test category"} | 2026-06-17 14:35:32
+<=============================================>
+Category created successfully: id=1, name=Test category | 2026-06-17 14:35:32
+<=============================================>
+=== CREATE CATEGORY ATTEMPT END === | 2026-06-17 14:35:32
+<=============================================>
+=== UPDATE CATEGORY ATTEMPT START === | 2026-06-17 14:35:52
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:35:52
+<=============================================>
+Raw Input Data: {"id":1,"name":"test2"} | 2026-06-17 14:35:52
+<=============================================>
+Category updated successfully: id=1 name=test2 by caller id=1 | 2026-06-17 14:35:52
+<=============================================>
+=== UPDATE CATEGORY ATTEMPT END === | 2026-06-17 14:35:52
+<=============================================>
+=== READ CATEGORY ATTEMPT START === | 2026-06-17 14:36:25
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:36:25
+<=============================================>
+Categories retrieved successfully: count=1 | 2026-06-17 14:36:25
+<=============================================>
+=== READ CATEGORY ATTEMPT END === | 2026-06-17 14:36:25
+<=============================================>
+=== READ CATEGORY ATTEMPT START === | 2026-06-17 14:36:34
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:36:34
+<=============================================>
+Category retrieved successfully: id=1 | 2026-06-17 14:36:34
+<=============================================>
+=== READ CATEGORY ATTEMPT START === | 2026-06-17 14:36:40
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:36:40
+<=============================================>
+Read category failed: id=2 not found | 2026-06-17 14:36:40
+<=============================================>
+=== READ CATEGORY ATTEMPT START === | 2026-06-17 14:36:47
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:36:47
+<=============================================>
+Category retrieved successfully: id=1 | 2026-06-17 14:36:47
+<=============================================>
+=== READ CATEGORY ATTEMPT START === | 2026-06-17 14:36:57
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:36:57
+<=============================================>
+Category retrieved successfully: id=1 | 2026-06-17 14:36:57
+<=============================================>
+=== DELETE CATEGORY ATTEMPT START === | 2026-06-17 14:37:19
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:37:19
+<=============================================>
+Raw Input Data: {"id":1} | 2026-06-17 14:37:19
+<=============================================>
+Category deleted successfully: id=1 (test2) by caller id=1 | 2026-06-17 14:37:19
+<=============================================>
+=== DELETE CATEGORY ATTEMPT END === | 2026-06-17 14:37:19
+<=============================================>
+=== CREATE CLIENT ATTEMPT START === | 2026-06-17 14:42:26
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:42:26
+<=============================================>
+Raw Input Data: [] | 2026-06-17 14:42:26
+<=============================================>
+=== CREATE CLIENT ATTEMPT START === | 2026-06-17 14:42:33
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:42:33
+<=============================================>
+Raw Input Data: {"name":"new client","organisation_id":"1","email":"client@new.com","password":"password"} | 2026-06-17 14:42:33
+<=============================================>
+Client created successfully: id=3, email=client@new.com | 2026-06-17 14:42:33
+<=============================================>
+=== CREATE CLIENT ATTEMPT END === | 2026-06-17 14:42:33
+<=============================================>
+=== CREATE CLIENT ATTEMPT START === | 2026-06-17 14:42:51
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:42:51
+<=============================================>
+Raw Input Data: [] | 2026-06-17 14:42:51
+<=============================================>
+=== CREATE CLIENT ATTEMPT START === | 2026-06-17 14:43:14
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:43:14
+<=============================================>
+Raw Input Data: {"name":"new client","organisation_id":"1","email":"client@new.com","password":"password"} | 2026-06-17 14:43:14
+<=============================================>
+Create client failed: email already in use - client@new.com | 2026-06-17 14:43:14
+<=============================================>
+=== CREATE CLIENT ATTEMPT START === | 2026-06-17 14:43:19
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:43:19
+<=============================================>
+Raw Input Data: {"name":"new client","organisation_id":"1","password":"password"} | 2026-06-17 14:43:19
+<=============================================>
+=== CREATE CLIENT ATTEMPT START === | 2026-06-17 14:43:59
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:43:59
+<=============================================>
+Raw Input Data: {"id":1,"name":"new client","organisation_id":"1","password":"password"} | 2026-06-17 14:43:59
+<=============================================>
+=== CREATE CLIENT ATTEMPT START === | 2026-06-17 14:44:07
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:44:07
+<=============================================>
+Raw Input Data: {"id":1,"name":"new client","organisation_id":"1","email":"client@new.com","password":"password"} | 2026-06-17 14:44:07
+<=============================================>
+Create client failed: email already in use - client@new.com | 2026-06-17 14:44:07
+<=============================================>
+=== CREATE CLIENT ATTEMPT START === | 2026-06-17 14:44:18
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:44:18
+<=============================================>
+Raw Input Data: {"id":1,"name":"new client","organisation_id":"1","password":"password"} | 2026-06-17 14:44:18
+<=============================================>
+=== CREATE CLIENT ATTEMPT START === | 2026-06-17 14:44:29
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:44:29
+<=============================================>
+Raw Input Data: {"id":1,"name":"new client","organisation_id":1,"password":"password"} | 2026-06-17 14:44:29
+<=============================================>
+=== CREATE CLIENT ATTEMPT START === | 2026-06-17 14:44:57
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:44:57
+<=============================================>
+Raw Input Data: {"id":1,"name":"new client","organisation_id":"1","email":"client2@new.com","password":"password"} | 2026-06-17 14:44:57
+<=============================================>
+Client created successfully: id=4, email=client2@new.com | 2026-06-17 14:44:57
+<=============================================>
+=== CREATE CLIENT ATTEMPT END === | 2026-06-17 14:44:57
+<=============================================>
+=== UPDATE CLIENT ATTEMPT START === | 2026-06-17 14:45:18
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:45:18
+<=============================================>
+Raw Input Data: {"id":1,"name":"new client","organisation_id":"1","email":"client2@new.com","password":"password"} | 2026-06-17 14:45:18
+<=============================================>
+=== UPDATE CLIENT ATTEMPT START === | 2026-06-17 14:45:24
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:45:24
+<=============================================>
+Raw Input Data: {"id":1,"name":"new client","organisation_id":"1","email":"client2@new.com","password":"password"} | 2026-06-17 14:45:24
+<=============================================>
+=== UPDATE CLIENT ATTEMPT START === | 2026-06-17 14:45:28
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:45:28
+<=============================================>
+Raw Input Data: {"id":1,"name":"new client","organisation_id":"1","password":"password"} | 2026-06-17 14:45:28
+<=============================================>
+Client updated successfully: id=1 by caller id=1 | 2026-06-17 14:45:28
+<=============================================>
+=== UPDATE CLIENT ATTEMPT END === | 2026-06-17 14:45:28
+<=============================================>
+=== UPDATE CLIENT ATTEMPT START === | 2026-06-17 14:45:40
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:45:40
+<=============================================>
+Raw Input Data: {"id":1,"password":"password"} | 2026-06-17 14:45:40
+<=============================================>
+=== UPDATE CLIENT ATTEMPT START === | 2026-06-17 14:46:02
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:46:02
+<=============================================>
+Raw Input Data: {"id":1,"password":"password"} | 2026-06-17 14:46:02
+<=============================================>
+=== UPDATE CLIENT ATTEMPT START === | 2026-06-17 14:46:30
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:46:30
+<=============================================>
+Raw Input Data: [] | 2026-06-17 14:46:30
+<=============================================>
+=== UPDATE CLIENT ATTEMPT START === | 2026-06-17 14:46:36
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:46:36
+<=============================================>
+Raw Input Data: {"id":1,"name":"new client","organisation_id":"1","email":"client2@new.com"} | 2026-06-17 14:46:36
+<=============================================>
+=== UPDATE CLIENT ATTEMPT START === | 2026-06-17 14:46:43
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:46:43
+<=============================================>
+Raw Input Data: [] | 2026-06-17 14:46:43
+<=============================================>
+=== UPDATE CLIENT ATTEMPT START === | 2026-06-17 14:46:53
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:46:53
+<=============================================>
+Raw Input Data: {"id":1,"name":"new client","organisation_id":"1"} | 2026-06-17 14:46:53
+<=============================================>
+Client updated successfully: id=1 by caller id=1 | 2026-06-17 14:46:53
+<=============================================>
+=== UPDATE CLIENT ATTEMPT END === | 2026-06-17 14:46:53
+<=============================================>
+=== READ CLIENT ATTEMPT START === | 2026-06-17 14:47:46
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:47:46
+<=============================================>
+Clients retrieved successfully: count=3 | 2026-06-17 14:47:46
+<=============================================>
+=== READ CLIENT ATTEMPT END === | 2026-06-17 14:47:46
+<=============================================>
+=== READ CLIENT ATTEMPT START === | 2026-06-17 14:51:46
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:51:46
+<=============================================>
+Client retrieved successfully: id=1 | 2026-06-17 14:51:46
+<=============================================>
+=== DELETE CLIENT ATTEMPT START === | 2026-06-17 14:52:41
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:52:41
+<=============================================>
+Raw Input Data: {"id":1} | 2026-06-17 14:52:41
+<=============================================>
+Client soft-deleted successfully: id=1 (new client) by caller id=1 | 2026-06-17 14:52:41
+<=============================================>
+=== DELETE CLIENT ATTEMPT END === | 2026-06-17 14:52:41
+<=============================================>
+=== READ ACTIVITY LOGS ATTEMPT START === | 2026-06-17 14:58:30
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:58:30
+<=============================================>
+Activity logs retrieved successfully: page=1 per_page=2 total=34 | 2026-06-17 14:58:30
+<=============================================>
+=== READ ACTIVITY LOGS ATTEMPT END === | 2026-06-17 14:58:30
+<=============================================>
+=== READ ACTIVITY LOGS ATTEMPT START === | 2026-06-17 14:58:42
+<=============================================>
+Authorized caller: id=1 role=super_admin | 2026-06-17 14:58:42
+<=============================================>
+Activity logs retrieved successfully: page=1 per_page=5 total=34 | 2026-06-17 14:58:42
+<=============================================>
+=== READ ACTIVITY LOGS ATTEMPT END === | 2026-06-17 14:58:42
+<=============================================>

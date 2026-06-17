@@ -7,8 +7,10 @@ error_reporting(E_ALL);
 require_once __DIR__ . '/../utils/response.php';
 require_once __DIR__ . '/../utils/utilityFunctions.php';
 
+// Set CORS and content-type headers
 setCorsHeaders();
 
+// Reject non-GET requests
 if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
     echo generateResponse(false, "Method not allowed. Use GET.", null, 405);
     exit;
@@ -18,14 +20,21 @@ require_once __DIR__ . '/../utils/conn.php';
 require_once __DIR__ . '/../log.php';
 require_once __DIR__ . '/../jwt.php';
 
+// Open DB connection
 $conn = getConnection();
 log_action("=== READ CATEGORY ATTEMPT START ===");
 
 try {
+    // Authenticate request via JWT
     $decoded = authenticateRequest($conn);
 
+    // Restrict to admins only
+    requireAdminRole($decoded);
+
+    // Read query params
     $id = $_GET['id'] ?? null;
 
+    // Single category lookup by id
     if ($id !== null) {
         if (!ctype_digit((string) $id)) {
             log_action("Validation failed: invalid id - $id");
@@ -60,6 +69,7 @@ try {
         exit;
     }
 
+    // Fetch all categories
     $result = $conn->query("SELECT id, name, created_at, updated_at FROM categories");
 
     if (!$result) {

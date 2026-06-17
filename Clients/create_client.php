@@ -22,7 +22,7 @@ require_once __DIR__ . '/../jwt.php';
 
 // Open DB connection
 $conn = getConnection();
-log_action("=== CREATE ORGANISATION ATTEMPT START ===");
+log_action("=== CREATE CLIENT ATTEMPT START ===");
 
 try {
     // Authenticate request via JWT
@@ -36,13 +36,14 @@ try {
     log_action("Raw Input Data: " . json_encode($data));
 
     // Sanitize input
-    $name  = trim($conn->real_escape_string($data['name']  ?? ''));
-    $email = trim($conn->real_escape_string($data['email'] ?? ''));
-    $url   = trim($conn->real_escape_string($data['url']   ?? ''));
+    $organisationId = isset($data['organisation_id']) ? (int) $data['organisation_id'] : 0;
+    $name           = trim($conn->real_escape_string($data['name']     ?? ''));
+    $email          = trim($conn->real_escape_string($data['email']    ?? ''));
+    $password       = $data['password'] ?? '';
 
     // Validate required fields
-    if (!$name || !$email || !$url) {
-        echo generateResponse(false, "Name, email and url are required.", null, 400);
+    if (!$organisationId || !$name || !$email || !$password) {
+        echo generateResponse(false, "organisation_id, name, email and password are required.", null, 400);
         closeConnection($conn);
         exit;
     }
@@ -55,43 +56,56 @@ try {
         exit;
     }
 
-    // Validate URL format
-    if (!filter_var($url, FILTER_VALIDATE_URL)) {
-        log_action("Validation failed: invalid url format - $url");
-        echo generateResponse(false, "Invalid url.", null, 400);
+    // Verify organisation exists
+    $orgCheck = $conn->query("SELECT id FROM organisations WHERE id=$organisationId");
+
+    if (!$orgCheck) {
+        log_action("Organisation check query failed: " . $conn->error);
+        echo generateResponse(false, "An error occured", null, 500);
+        closeConnection($conn);
+        exit;
+    }
+
+    if ($orgCheck->num_rows === 0) {
+        log_action("Create client failed: organisation id=$organisationId not found");
+        echo generateResponse(false, "Organisation not found.", null, 404);
         closeConnection($conn);
         exit;
     }
 
     // Check email uniqueness
-    $checkResult = $conn->query("SELECT id FROM organisations WHERE email='$email'");
+    $emailCheck = $conn->query("SELECT id FROM clients WHERE email='$email'");
 
-    if (!$checkResult) {
+    if (!$emailCheck) {
         log_action("Email check query failed: " . $conn->error);
         echo generateResponse(false, "An error occured", null, 500);
         closeConnection($conn);
         exit;
     }
 
-    if ($checkResult->num_rows > 0) {
-        log_action("Create organisation failed: email already in use - $email");
+    if ($emailCheck->num_rows > 0) {
+        log_action("Create client failed: email already in use - $email");
         echo generateResponse(false, "Email already in use.", null, 409);
         closeConnection($conn);
         exit;
     }
 
-    // Insert organisation record
-    $insertSql = "INSERT INTO organisations (name, email, url) VALUES ('$name', '$email', '$url')";
+    // Hash password
+    $hashedPassword = $conn->real_escape_string(password_hash($password, PASSWORD_BCRYPT));
+
+    // Insert client record
+    $insertSql = "INSERT INTO clients (organisation_id, name, email, password)
+                  VALUES ($organisationId, '$name', '$email', '$hashedPassword')";
 
     if (!$conn->query($insertSql)) {
-        log_action("Failed to create organisation: " . $conn->error);
+        log_action("Failed to create client: " . $conn->error);
         echo generateResponse(false, "An error occured", null, 500);
         closeConnection($conn);
         exit;
     }
 
-    $orgId = $conn->insert_id;
-    log_action("Organisation created successfully: id=$orgId, name=$name");
+    $clientId = $conn->insert_id;
+    log_action("Client created successfully: id=$clientId, email=$email");
 
     // Fetch caller info for audit log
     $callerId = (int) $decoded['id'];
@@ -101,24 +115,25 @@ try {
         $callerFullName = $caller['firstname'] . ' ' . $caller['lastname'];
         try {
             // Write to activity log
-            audit_log($conn, $callerId, $callerFullName, getLogMessage('createdOrganisation', ['name' => $name]), 1);
+            audit_log($conn, $callerId, $callerFullName, getLogMessage('createdClient', ['name' => $name]), 1);
         } catch (\Throwable $e) {
             log_action("Audit log call failed: " . $e->getMessage());
         }
     }
 
-    echo generateResponse(true, "Organisation created successfully.", [
-        "organisation" => [
-            "id"    => $orgId,
-            "name"  => $name,
-            "email" => $email,
-            "url"   => $url
+    echo generateResponse(true, "Client created successfully.", [
+        "client" => [
+            "id"              => $clientId,
+            "organisation_id" => $organisationId,
+            "name"            => $name,
+            "email"           => $email,
+            "role"            => "user"
         ]
     ], 201);
 } catch (\Throwable $e) {
-    log_action("Create organisation exception: " . $e->getMessage());
+    log_action("Create client exception: " . $e->getMessage());
     echo generateResponse(false, "An error occured", null, 500);
 } finally {
     closeConnection($conn);
-    log_action("=== CREATE ORGANISATION ATTEMPT END ===");
+    log_action("=== CREATE CLIENT ATTEMPT END ===");
 }

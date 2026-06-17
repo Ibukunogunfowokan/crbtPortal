@@ -22,14 +22,14 @@ require_once __DIR__ . '/../jwt.php';
 
 // Open DB connection
 $conn = getConnection();
-log_action("=== DELETE CATEGORY ATTEMPT START ===");
+log_action("=== DELETE CLIENT ATTEMPT START ===");
 
 try {
     // Authenticate request via JWT
     $decoded = authenticateRequest($conn);
 
-    // Restrict to admins only
-    requireAdminRole($decoded);
+    // Restrict to super_admin only
+    requireRole($decoded, 'super_admin');
 
     // Read request body
     $data = getRequestBody();
@@ -39,40 +39,40 @@ try {
 
     // Validate target id
     if (!$targetId) {
-        echo generateResponse(false, "Category id is required.", null, 400);
+        echo generateResponse(false, "Client id is required.", null, 400);
         closeConnection($conn);
         exit;
     }
 
-    // Verify category exists
-    $checkResult = $conn->query("SELECT name FROM categories WHERE id=$targetId");
+    // Verify client exists and is not already deleted
+    $checkResult = $conn->query("SELECT name FROM clients WHERE id=$targetId AND soft_delete=0");
 
     if (!$checkResult) {
-        log_action("Delete category check query failed: " . $conn->error);
+        log_action("Delete client check query failed: " . $conn->error);
         echo generateResponse(false, "An error occured", null, 500);
         closeConnection($conn);
         exit;
     }
 
     if ($checkResult->num_rows === 0) {
-        log_action("Delete category failed: id=$targetId not found");
-        echo generateResponse(false, "Category not found.", null, 404);
+        log_action("Delete client failed: id=$targetId not found");
+        echo generateResponse(false, "Client not found.", null, 404);
         closeConnection($conn);
         exit;
     }
 
-    $category = $checkResult->fetch_assoc();
-    $categoryName = $category['name'];
+    $client = $checkResult->fetch_assoc();
+    $clientName = $client['name'];
 
-    // Hard-delete the category
-    if (!$conn->query("DELETE FROM categories WHERE id=$targetId")) {
-        log_action("Delete category query failed: " . $conn->error);
+    // Soft-delete the client
+    if (!$conn->query("UPDATE clients SET soft_delete=1, updated_at=NOW() WHERE id=$targetId")) {
+        log_action("Delete client query failed: " . $conn->error);
         echo generateResponse(false, "An error occured", null, 500);
         closeConnection($conn);
         exit;
     }
 
-    log_action("Category deleted successfully: id=$targetId ($categoryName) by caller id={$decoded['id']}");
+    log_action("Client soft-deleted successfully: id=$targetId ($clientName) by caller id={$decoded['id']}");
 
     // Fetch caller info for audit log
     $callerId = (int) $decoded['id'];
@@ -82,17 +82,17 @@ try {
         $callerFullName = $caller['firstname'] . ' ' . $caller['lastname'];
         try {
             // Write to activity log
-            audit_log($conn, $callerId, $callerFullName, getLogMessage('deletedCategory', ['name' => $categoryName]), 1);
+            audit_log($conn, $callerId, $callerFullName, getLogMessage('deletedClient', ['name' => $clientName]), 1);
         } catch (\Throwable $e) {
             log_action("Audit log call failed: " . $e->getMessage());
         }
     }
 
-    echo generateResponse(true, "Category deleted successfully.", null, 200);
+    echo generateResponse(true, "Client deleted successfully.", null, 200);
 } catch (\Throwable $e) {
-    log_action("Delete category exception: " . $e->getMessage());
+    log_action("Delete client exception: " . $e->getMessage());
     echo generateResponse(false, "An error occured", null, 500);
 } finally {
     closeConnection($conn);
-    log_action("=== DELETE CATEGORY ATTEMPT END ===");
+    log_action("=== DELETE CLIENT ATTEMPT END ===");
 }

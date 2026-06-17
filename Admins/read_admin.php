@@ -22,8 +22,13 @@ $conn = getConnection();
 log_action("=== READ ADMIN ATTEMPT START ===");
 
 try {
+    // Authenticate request via JWT
     $decoded = authenticateRequest($conn);
 
+    // Restrict to admins only
+    requireAdminRole($decoded);
+
+    // Read query params
     $id = $_GET['id'] ?? null;
 
     if ($id !== null) {

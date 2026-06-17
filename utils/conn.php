@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/response.php';
+require_once __DIR__ . '/../log.php';
 
 function getConnection()
 {
@@ -19,13 +20,15 @@ function getConnection()
         $conn = new mysqli($host, $user, $pass, $db, $port);
 
         if ($conn->connect_error) {
+            log_action("DB connection failed: " . $conn->connect_error);
             echo generateResponse(false, "An error occured", null, 500);
             exit;
         }
 
         return $conn;
     } catch (\mysqli_sql_exception $e) {
-        echo generateResponse(false, "An error occured");
+        log_action("DB connection exception: " . $e->getMessage());
+        echo generateResponse(false, "An error occured", null, 500);
         exit;
     }
 }

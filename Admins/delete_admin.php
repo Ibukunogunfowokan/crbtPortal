@@ -7,8 +7,10 @@ error_reporting(E_ALL);
 require_once __DIR__ . '/../utils/response.php';
 require_once __DIR__ . '/../utils/utilityFunctions.php';
 
+// Set CORS and content-type headers
 setCorsHeaders();
 
+// Reject non-POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo generateResponse(false, "Method not allowed. Use POST.", null, 405);
     exit;
@@ -18,18 +20,24 @@ require_once __DIR__ . '/../utils/conn.php';
 require_once __DIR__ . '/../log.php';
 require_once __DIR__ . '/../jwt.php';
 
+// Open DB connection
 $conn = getConnection();
 log_action("=== DELETE ADMIN ATTEMPT START ===");
 
 try {
+    // Authenticate request via JWT
     $decoded = authenticateRequest($conn);
+
+    // Restrict to super_admin only
     requireRole($decoded, 'super_admin');
 
+    // Read request body
     $data = getRequestBody();
     log_action("Raw Input Data: " . json_encode($data));
 
     $targetId = isset($data['id']) ? (int) $data['id'] : 0;
 
+    // Validate target id
     if (!$targetId) {
         echo generateResponse(false, "Admin id is required.", null, 400);
         closeConnection($conn);
@@ -38,6 +46,7 @@ try {
 
     $callerId = (int) $decoded['id'];
 
+    // Prevent self-deletion
     if ($callerId === $targetId) {
         log_action("Delete admin blocked: caller id=$callerId attempted to delete themselves");
         echo generateResponse(false, "You cannot delete your own account.", null, 403);
@@ -65,6 +74,7 @@ try {
     $target = $checkResult->fetch_assoc();
     $targetFullName = $target['firstname'] . ' ' . $target['lastname'];
 
+    // Soft-delete the admin
     if (!$conn->query("UPDATE admins SET soft_delete=1, updated_at=NOW() WHERE id=$targetId")) {
         log_action("Delete admin query failed: " . $conn->error);
         echo generateResponse(false, "An error occured", null, 500);
@@ -74,12 +84,13 @@ try {
 
     log_action("Admin soft-deleted successfully: id=$targetId ($targetFullName) by caller id=$callerId");
 
-    // Audit log
+    // Fetch caller info for audit log
     $callerResult = $conn->query("SELECT firstname, lastname FROM admins WHERE id=$callerId");
     if ($callerResult && $callerResult->num_rows > 0) {
         $caller = $callerResult->fetch_assoc();
         $callerFullName = $caller['firstname'] . ' ' . $caller['lastname'];
         try {
+            // Write to activity log
             audit_log($conn, $callerId, $callerFullName, getLogMessage('deletedAdmin', ['name' => $targetFullName]), 1);
         } catch (\Throwable $e) {
             log_action("Audit log call failed: " . $e->getMessage());
